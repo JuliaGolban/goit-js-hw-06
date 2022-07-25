@@ -23,5 +23,16 @@ const imgEl = images
   .join('');
 
 listGallery.insertAdjacentHTML('beforeend', imgEl);
-listGallery.classList.add('grid');
+
 console.log(imgEl);
+
+/* ==== add style ====*/
+listGallery.style.listStyle = 'none';
+listGallery.style.padding = '0';
+listGallery.style.margin = '0';
+listGallery.style.display = 'flex';
+listGallery.style.flexWrap = 'wrap';
+listGallery.style.justifyContent = 'center';
+listGallery.style.gap = '30px';
+
+console.log(listGallery.style);
