@@ -22,10 +22,3 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
-
-/* ==== add style from tasks ====*/
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
