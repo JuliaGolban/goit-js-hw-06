@@ -41,7 +41,8 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  boxes.remove();
+  boxes.innerHTML = '';
+  // boxes.remove();
 }
 
 function getRandomHexColor() {
