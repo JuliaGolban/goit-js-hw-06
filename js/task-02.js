@@ -21,18 +21,17 @@ const listIngredients = document.querySelector('ul#ingredients');
 // }
 
 // ==== modern:
-// const elements = ingredients.map(item => {
-//   const itemEl = document.createElement('li');
-//   itemEl.textContent = item;
-//   itemEl.classList.add('item');
-//   listIngredients.append(itemEl);
+const elements = ingredients.map(item => {
+  const itemEl = document.createElement('li');
+  itemEl.textContent = item;
+  itemEl.classList.add('item');
+  return itemEl;
+});
+listIngredients.append(...elements);
 
-//   console.log(itemEl);
-// });
-
-// ==== в одну операцию:
-const elements = ingredients
-  .map(item => `<li class="item">${item}</li>`)
-  .join('');
-console.log(elements);
-listIngredients.innerHTML = elements;
+// // ==== в одну операцию:
+// const elements = ingredients
+//   .map(item => `<li class="item">${item}</li>`)
+//   .join('');
+// console.log(elements);
+// listIngredients.innerHTML = elements;
