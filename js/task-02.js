@@ -21,11 +21,19 @@ const listIngredients = document.querySelector('ul#ingredients');
 // }
 
 // ==== modern:
-const elements = ingredients.map(item => {
-  const itemEl = document.createElement('li');
-  itemEl.textContent = item;
-  itemEl.classList.add('item');
-  listIngredients.append(itemEl);
+// const elements = ingredients.map(item => {
+//   const itemEl = document.createElement('li');
+//   itemEl.textContent = item;
+//   itemEl.classList.add('item');
+//   listIngredients.append(itemEl);
 
-  console.log(itemEl);
-});
+//   console.log(itemEl);
+// });
+
+// ==== в одну операцию:
+const elements = ingredients.reduce(
+  (previousItem, item) => previousItem + `<li class="item">${item}</li>`,
+  ''
+);
+console.log(elements);
+listIngredients.innerHTML = elements;
