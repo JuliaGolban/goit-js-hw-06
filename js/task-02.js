@@ -31,9 +31,8 @@ const listIngredients = document.querySelector('ul#ingredients');
 // });
 
 // ==== в одну операцию:
-const elements = ingredients.reduce(
-  (previousItem, item) => previousItem + `<li class="item">${item}</li>`,
-  ''
-);
+const elements = ingredients
+  .map(item => `<li class="item">${item}</li>`)
+  .join('');
 console.log(elements);
 listIngredients.innerHTML = elements;
