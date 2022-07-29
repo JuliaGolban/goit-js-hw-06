@@ -24,16 +24,14 @@ function createBoxes(amount) {
     array.push(newBoxes);
 
     baseboxSize += 10;
-    newBoxes.style.backgroundColor = getRandomHexColor();
-    newBoxes.style.height = baseboxSize + 'px';
-    newBoxes.style.width = baseboxSize + 'px';
-    newBoxes.style.margin = '10px';
+    addStyleNewBoxes(newBoxes, baseboxSize);
 
     // let fragment = new DocumentFragment();
     // for (let i = 0; i < amount; i += 1) {
     //   const newBoxes = document.createElement('div');
     //   newBoxes.textContent = +i;
     //   fragment.appendChild(newBoxes);
+    //   addStyleNewBoxes(newBoxes, baseboxSize);
     // }
     // boxes.append(fragment);
   }
@@ -43,6 +41,13 @@ function createBoxes(amount) {
 function destroyBoxes() {
   boxes.innerHTML = '';
   // boxes.remove();
+}
+
+function addStyleNewBoxes(newBoxes, baseboxSize) {
+  newBoxes.style.backgroundColor = getRandomHexColor();
+  newBoxes.style.height = baseboxSize + 'px';
+  newBoxes.style.width = baseboxSize + 'px';
+  newBoxes.style.margin = '10px';
 }
 
 function getRandomHexColor() {

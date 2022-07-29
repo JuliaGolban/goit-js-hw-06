@@ -29,9 +29,16 @@ const elements = ingredients.map(item => {
 });
 listIngredients.append(...elements);
 
-// // ==== в одну операцию:
+// // ==== in one line:
 // const elements = ingredients
 //   .map(item => `<li class="item">${item}</li>`)
 //   .join('');
 // console.log(elements);
+// listIngredients.innerHTML = elements;
+
+// // ==== or:
+// const elements = ingredients.reduce(
+//   (acc, item) => acc + `<li class="item">${item}</li>`,
+//   ''
+// );
 // listIngredients.innerHTML = elements;
