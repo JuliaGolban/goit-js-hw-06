@@ -1,8 +1,8 @@
-**Read in other languages: [Русский](README.md), [Українська](README.ua.md).**
+**Read in other languages: [English](README.md), [Українська](README.ua.md).**
 
-## Задание 1
+## Task 1
 
-В HTML есть список категорий `ul#categories`.
+In HTML, there is a list of categories, `ul#categories`.
 
 ```json
 <ul id="categories">
@@ -36,14 +36,15 @@
 </ul>
 ```
 
-Напиши скрипт который:
+Write a script that:
 
-1. Посчитает и выведет в консоль количество категорий в `ul#categories`, то есть
-   элементов `li.item`.
-2. Для каждого элемента `li.item` в списке `ul#categories`, найдет и выведет в
-   консоль текст заголовка элемента (тега `<h2>`) и количество элементов в
-   категории (всех вложенных в него `<li>`).
-3. В результате, в консоли будут выведены такие сообщения.
+1. Will count and display in the console the number of categories in
+   `ul#categories`, that is, `li.item` elements.
+2. For each `li.item`element in the `ul#categories`, list, will find and display
+   in the console the element header text (`<h2>` tag) and the number of
+   elements in the category (all nested `<li>`).
+
+As a result, the following messages will be displayed in the console.
 
 ```json
 Number of categories: 3
@@ -58,15 +59,15 @@ Category: Technologies
 Elements: 5
 ```
 
-## Задание 2
+## Task 2
 
-В HTML есть пустой список `ul#ingredients`.
+In HTML, there is an empty `ul#ingredients` list.
 
 ```json
 <ul id="ingredients"></ul>
 ```
 
-В JavaScript есть массив строк.
+In JavaScript, there is an array of strings.
 
 ```json
 const ingredients = [
@@ -79,31 +80,29 @@ const ingredients = [
 ];
 ```
 
-Напиши скрипт, который для каждого элемента массива `ingredients`:
+Write a script that, for each element in the `ingredients`array:
 
-1. Создаст отдельный элемент `<li>`. Обзательно используй метод
-   `document.createElement()`.
-2. Добавит название ингредиента как его текстовое содержимое.
-3. Добавит элементу класс `item`.
-4. После чего вставит все `<li>` за одну операцию в список `ul#ingredients`.
+1. Will create a separate `<li>` element. Be sure to use the
+   `document.createElement()` method.
+2. Will add the ingredient name as its text content.
+3. Will add the item class to the `element`.
+4. Then will insert all `<li>` to the `ul#ingredients` list in a single
+   operation.
 
-## Задание 3
+## Task 3
 
-В HTML есть список `ul.gallery`.
+Write a script to create a gallery of images from an array of data. There is a
+list, `ul.gallery`, in HTML.
 
 ```json
 <ul class="gallery"></ul>
 ```
 
-Напиши скрипт для создания галереи изображений по массиву данных.
+Use an array of objects `images` to create `<img>` elements nested in `<li>`.
+Use template strings and the `insertAdjacentHTML()`method to create markup.
 
-Используй массив объектов images для создания элементов `<img>` вложенных в
-`<li>`. Для создания разметки используй шаблонные строки и метод
-`insertAdjacentHTML()`.
-
-- Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-- Добавь минимальное оформление галереи флексбоксами или гридами через CSS
-  классы.
+- All gallery items must be added to DOM in one insert operation.
+- Add at least some gallery design with flexboxes or grids using CSS classes.
   ```json
   const images = [
   {
@@ -121,10 +120,10 @@ const ingredients = [
   ];
   ```
 
-## Задание 4
+## Task 4
 
-Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и
-уменьшать его значение на единицу.
+The counter consists of a span and buttons, which, when clicked, should increase
+and decrease its value by one.
 
 ```json
 <div id="counter">
@@ -134,29 +133,29 @@ const ingredients = [
 </div>
 ```
 
-- Создай переменную `counterValue` в которой будет храниться текущее значение
-  счетчика и инициализируй её значением 0.
-- Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай
-  значение счтетчика.
-- Обновляй интерфейс новым значением переменной `counterValue`.
+- Create a variable, `counterValue`, that will store the current counter value
+  and initialize it with `0`.
+- Add listeners for clicks on the buttons; inside them, increase or decrease the
+  value of the counter.
+- Update the interface with the new value of the variable `counterValue`.
 
-## Задание 5
+## Task 5
 
-Напиши скрипт который:
+Write a script that:
 
-- при наборе текста в инпуте `input#name-input` (событие `input`), подставляет
-  его текущее значение в `span#name-output`,
-- если инпут пустой, в спане должна отображаться строка "Anonymous".
+- when typing in the `input#name-input`input (`input` event), , substitutes its
+  current value into `span#name-output`,
+- if the input is empty, the span should display the `"Anonymous"` string.
 
 ```json
 <input type="text" id="name-input" placeholder="Please enter your name" />
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 ```
 
-## Задание 6
+## Task 6
 
-Напиши скрипт, который при потере фокуса на инпуте (событие `blur`), проверяет
-его содержимое на правильное количество введённых символов.
+Write a script that, when focus on input is lost (`blur` event), checks its
+contents for the correct number of entered characters.
 
 ```json
 <input
@@ -167,13 +166,13 @@ const ingredients = [
 />
 ```
 
-- Сколько символов должно быть в инпуте, указывается в его атрибуте
-  `data-length`.
-- Если введено подходящее количество символов, то `border` инпута становится
-  зелёным, если неправильное - красным.
+- The number of characters in the input is specified in its
+  `data-length`attribute.
+- If the number of characters entered is correct, the input's `border` turns
+  green, or red with a wrong number.
 
-Для добавления стилей, используй CSS-классы `valid` и `invalid`, которые мы уже
-добавили в исходные файлы задания.
+To add styles, use the `valid` and `invalid` CSS classes, which you can find in
+the task source files.
 
 ```json
 #validation-input {
@@ -189,14 +188,14 @@ const ingredients = [
 }
 ```
 
-## Задание 7
+## Task 7
 
-Напиши скрипт, который:
+Write a script that:
 
-- реагирует на изменение значения `input#font-size-control` (событие `input`);
-- изменяет инлайн-стиль span#text обновляя свойство `font-size`.
+- responds to changes in the value of `input#font-size-control` (`input` event);
+- changes the inline style of `span#text` by updating the `font-size` property.
 
-В результате при перетаскивании ползунка будет меняться размер текста.
+As a result, the text size will change responding to scrollbar dragging.
 
 ```json
 <input id="font-size-control" type="range" min="16" max="96" />
@@ -204,9 +203,9 @@ const ingredients = [
 <span id="text">Abracadabra!</span>
 ```
 
-## Задание 8
+## Task 8
 
-Напиши скрипт управления формой логина.
+Write a script to manage the login form.
 
 ```json
 <form class="login-form">
@@ -222,20 +221,22 @@ const ingredients = [
 </form>
 ```
 
-1. Обработка отправки формы `form.login-form` должна быть по событию `submit`.
-2. При отправке формы страница не должна перезагружаться.
-3. Если в форме есть незаполненные поля, выводи `alert` с предупреждением о том,
-   что все поля должны быть заполнены.
-4. Если пользователь заполнил все поля и отправил форму, собери значения полей в
-   обьект, где имя поля будет именем свойства, а значение поля - значением
-   свойства. Для доступа к элементам формы используй свойство `elements`.
-5. Выведи обьект с введенными данными в консоль и очисти значения полей формы
-   методом reset.
+1. Form submission `form.login-form` must be processed on the `submit` event.
+2. The page must not reload when the form is submitted.
+3. If the form has empty fields, display `alert` saying that all fields must be
+   filled in.
+4. As soon as the user has filled in all the fields and submitted the form,
+   collect the field values into an object, where the field name will be the
+   property name and the field value will be the property value. Use the
+   `elements` property to access form elements.
+5. Display the object with the entered data in the console and clear the values
+   of the form fields using the `reset` method.
 
-## Задание 9
+## Task 9
 
-Напиши скрипт, который изменяет цвета фона элемента `<body>` через инлайн стиль
-при клике на `button.change-color` и выводит значение цвета в `span.color`.
+Write a script that changes the background colors of the `<body>` element via
+inline style when clicking on `button.change-color` and outputs the color value
+to `span.color`.
 
 ```json
 <div class="widget">
@@ -244,7 +245,7 @@ const ingredients = [
 </div>
 ```
 
-Для генерации случайного цвета используй функцию `getRandomHexColor`.
+Use the `getRandomHexColor`function to generate a random color.
 
 ```json
 function getRandomHexColor() {
@@ -254,11 +255,12 @@ function getRandomHexColor() {
 }
 ```
 
-## Задание 10 (выполнять не обязательно)
+## Task 10 (optional)
 
-Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит
-количество элементов в `input` и нажимает кнопку Создать, после чего рендерится
-коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
+Write a script to create and clear a collection of elements. The user enters the
+number of elements into `input` and clicks the `Create` button, after which a
+collection is rendered. When you click on the `Destroy` button, the collection
+is cleared.
 
 ```json
 <div id="controls">
@@ -270,14 +272,15 @@ function getRandomHexColor() {
 <div id="boxes"></div>
 ```
 
-Создай функцию `createBoxes(amount)`, которая принимает один параметр - число.
-Функция создает столько `<div>`, сколько указано в amount и добавляет их в
-`div#boxes`.
+Create a `createBoxes(amount)`function that takes one parameter, a number. The
+function creates as many `<div>`, function creates as many `<div>`, as specified
+in `amount` and adds them to `div#boxes`.
 
-1. Размеры самого первого `<div>` - 30px на 30px.
-2. Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
-3. Все элементы должены иметь случайный цвет фона в формате `HEX`. Используй
-   готовую функцию `getRandomHexColor` для получения цвета.
+1. The dimensions of the very first `<div>` are 30px by 30px.
+2. Each element after the first one should be 10px wider and higher than the
+   previous one.
+3. All elements must have a random HEX background color. Use the ready-made
+   `getRandomHexColor` function to get a color.
 
 ```json
 function getRandomHexColor() {
@@ -287,5 +290,5 @@ function getRandomHexColor() {
 }
 ```
 
-Создай функцию `destroyBoxes()`, которая очищает содержимое `div#boxes`, тем
-самым удаляя все созданные элементы.
+Create a `destroyBoxes()` function that clears the contents of `div#boxes`,
+thereby removing all created elements.
